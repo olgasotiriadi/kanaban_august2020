@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kanaban_august2020/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/kanaban_august2020/static/js/main.5711c4e0.chunk.js",
+    "main.js.map": "/kanaban_august2020/static/js/main.5711c4e0.chunk.js.map",
+    "runtime-main.js": "/kanaban_august2020/static/js/runtime-main.fea0c2ff.js",
+    "runtime-main.js.map": "/kanaban_august2020/static/js/runtime-main.fea0c2ff.js.map",
+    "static/js/2.37f42d80.chunk.js": "/kanaban_august2020/static/js/2.37f42d80.chunk.js",
+    "static/js/2.37f42d80.chunk.js.map": "/kanaban_august2020/static/js/2.37f42d80.chunk.js.map",
+    "index.html": "/kanaban_august2020/index.html",
+    "precache-manifest.ca7b7f3ac2e192ba3c1d8e18ef5fdeed.js": "/kanaban_august2020/precache-manifest.ca7b7f3ac2e192ba3c1d8e18ef5fdeed.js",
+    "service-worker.js": "/kanaban_august2020/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/kanaban_august2020/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.37f42d80.chunk.js.LICENSE.txt": "/kanaban_august2020/static/js/2.37f42d80.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fea0c2ff.js",
+    "static/js/2.37f42d80.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.5711c4e0.chunk.js"
+  ]
+}
