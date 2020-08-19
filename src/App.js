@@ -5,6 +5,7 @@ import {v4 as uuidv4} from 'uuid';
 import {Container, Row} from 'reactstrap';
 import Column from './Column';
 import AddTaskModal from './AddTaskModal';
+import AddColumnModal from './AddColumnModal';
 
 
 
@@ -34,6 +35,12 @@ function App() {
             title: 'Fourth task',
             priority: 0,
             status: 'DONE'
+        },
+        {
+            id: uuidv4(),
+            title: 'FIFTH task',
+            priority: 0,
+            status: 'DO AGAIN'
         }
     ]
 
@@ -64,17 +71,28 @@ function App() {
         const newTask = {
             id: uuidv4(),
             title: newTitle,
-            priority: newPriority,
+            priority: Number(newPriority),
             status: newStatus
         };
         const newTasks = [...tasks, newTask];
         setTasks(newTasks);
     }
 
+    const addNewColumn = (newTitle) => {
+        const newColumn = {
+            id: uuidv4(),
+            title: newTitle,
+            status: 'DO AGAIN'
+        };
+        const newColumns = [...columns, newColumn];
+        setColumns(newColumns);
+    }
+
     const statuses = ['TODO', 'PROGRESS', 'REVIEW', 'DONE'];
     const taskPriority = [0, 1, 2];
 
     const [tasks, setTasks] = useState(taskList);
+    const [columns, setColumns] = useState(columnList);
 
     const changeTaskStatus = (taskId, direction) => {
         const newTask = tasks.map(el => {
@@ -100,8 +118,15 @@ function App() {
         <div>
             <Container>
                 <AddTaskModal addNewTask={addNewTask}/>
+                <AddColumnModal addNewColumn={addNewColumn}/>
                 <Row>
-                    {columnList.map(el =>  <Column column={el} tasks={tasks} changeTaskStatus={changeTaskStatus} deleteTask={deleteTask}/>)}
+                    {columns.map(el => <Column
+                        key={el.id}
+                        column={el}
+                        tasks={tasks}
+                        changeTaskStatus={changeTaskStatus}
+                        deleteTask={deleteTask}
+                         />)}
                     {/*<Column title={'TODO'} tasks={tasks} changeTaskStatus={changeTaskStatus} />*/}
                     {/*<Column title={'PROGRESS'} tasks={tasks} changeTaskStatus={changeTaskStatus} />*/}
                     {/*<Column title={'REVIEW'} tasks={tasks} changeTaskStatus={changeTaskStatus} />*/}

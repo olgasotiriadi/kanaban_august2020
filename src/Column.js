@@ -14,6 +14,7 @@ function Column(props) {
                     .filter(el => el.status === column.status)
                     .sort((a, b) => b.priority - a.priority)
                     .map(el => <Task
+                        key={el.id}
                     task={el}
                     changeTaskStatus={changeTaskStatus}
                     deleteTask={deleteTask}

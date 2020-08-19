@@ -18,11 +18,14 @@ function AddTaskModal(props) {
 
         <>
             <Button onClick={() => setIsModalOpen(true)}>Add New Task</Button>
+            {' '}
+
+
             <Modal isOpen={isModalOpen}>
                 <ModalHeader>Add new task</ModalHeader>
                 <ModalBody>
                     <Label>New Title</Label>
-                    <Input type='text' value={newTitle} onChange={(e) => setNewTitle(e.target.value)}/>
+                    <Input type='text' value={newTitle} onChange={(e) => setNewTitle(e.target.value)}></Input>
 
                     <Row>
                         <Col>
